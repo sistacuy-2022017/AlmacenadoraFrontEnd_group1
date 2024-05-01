@@ -10,3 +10,4 @@ export const createTask = async (newTodo) => {
         throw new Error('Error al agregar la tarea: ', error);
     }
 };
+

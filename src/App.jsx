@@ -1,25 +1,14 @@
-import './App.css';
-import { TodoAdd } from './components/TodoAdd';
-import { useState } from 'react';
+import React from "react";
+import Todos from "./components/Todos";
+import { Toaster } from "react-hot-toast";
 
 function App() {
-    const [tasks, setTasks] = useState([]);
-
-    const handleNewTodo = (newTodo) => {
-        setTasks([...tasks, newTodo]);
-    };
-
-    return (
-        <>
-            <div className='card-to-do'>
-                <h1>Lista de tareas</h1>
-                <div className='add-todo'>
-                    <h3>Agregar Tarea</h3>
-                    <TodoAdd handleNewTodo={handleNewTodo} />
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <div className="App">
+      <Todos />
+      <Toaster position="top-center" reverseOrder={false} />{" "}
+    </div>
+  );
 }
 
 export default App;
