@@ -1,4 +1,3 @@
-// createTask.jsx
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { createTask } from "../services/api.jsx";
@@ -43,7 +42,7 @@ const CreateTask = ({ modal, toggle, fetchTasks }) => {
       toast.success("Tarea guardada correctamente");
       clearFormData();
       toggle();
-      fetchTasks(); // Llamamos a la función para obtener las tareas desde la base de datos
+      fetchTasks();
     } catch (error) {
       console.error("Error al guardar la tarea:", error);
       toast.error("Error al guardar la tarea");

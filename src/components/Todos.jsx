@@ -1,8 +1,7 @@
-// Todo.jsx
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
 import CreateTask from "../modals/createTask.jsx";
-import Card from "../components/TodoCard.jsx"; // Asegúrate de importar el componente Card
+import Card from "../components/TodoCard.jsx"; 
 import { getTask } from "../services/api.jsx";
 
 const Todo = () => {
