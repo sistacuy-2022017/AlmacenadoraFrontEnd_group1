@@ -1,11 +1,11 @@
-import React from "react";
-import Todos from "./components/Todos";
+import Todo from "./components/Todos.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="App">
-      <Todos />
+      <Todo/>
       <Toaster position="top-center" reverseOrder={false} />{" "}
     </div>
   );

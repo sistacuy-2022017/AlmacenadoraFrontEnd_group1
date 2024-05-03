@@ -11,3 +11,13 @@ export const createTask = async (newTodo) => {
     }
 };
 
+export const getTask = async () => {
+    try {
+        const response = await axios.get(`${baseUrl}/getTask`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error al obtener la tarea: ', error);
+    }
+};
+
+
