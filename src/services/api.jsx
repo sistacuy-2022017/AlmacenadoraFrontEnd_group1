@@ -21,3 +21,21 @@ export const getTask = async () => {
 };
 
 
+export const changeData = async (id, updatedTask) => {
+    try {
+        const response = await axios.put(`${baseUrl}/updateTask/${id}`, updatedTask);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error al actualizar la tarea: ', error);
+    }
+}
+
+export const deleteTaskes = async (id) => {
+    try {
+        const response = await axios.delete(`${baseUrl}/deleteTask/${id}`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error al eliminar la tarea: ', error);
+    }
+};
+
